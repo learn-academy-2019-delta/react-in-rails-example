@@ -1,1 +1,1 @@
-<%= react_component("HelloWorld") %>
+<%= react_component("HelloWorld", { is_logged_in: !current_user.nil?, current_user: {name: current_user&.name} }) %>
