@@ -23,7 +23,7 @@ module ReactAndRails
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-
+    config.hosts << "db8a62fb3a65410586e2601e633b5e52.vfs.cloud9.us-west-2.amazonaws.com"
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
