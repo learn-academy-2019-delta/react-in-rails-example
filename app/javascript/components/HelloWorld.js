@@ -10,6 +10,17 @@ class HelloWorld extends React.Component {
           This is a primary alert — check it out!
         </Alert>
         <h1>HelloWorld Component</h1>
+        {this.props.is_logged_in &&
+          <div>
+            <h2>You are logged in {this.props.current_user.name}</h2>
+            <a class='btn btn-danger' href="/users/sign_out">Sign Out</a>
+          </div>
+        }
+        {!this.props.is_logged_in &&
+          <div>
+            <a class='btn btn-primary' href="/users/sign_in">Sign In</a>
+          </div>
+        }
       </React.Fragment>
     );
   }
