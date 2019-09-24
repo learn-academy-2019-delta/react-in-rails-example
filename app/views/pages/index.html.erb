@@ -1,1 +1,8 @@
-<%= react_component("HelloWorld", { is_logged_in: !current_user.nil?, current_user: {name: current_user&.name} }) %>
+<%= react_component("HelloWorld", { 
+    is_logged_in: !current_user.nil?,
+    sign_in_route: new_user_session_path,
+    sign_out_route: destroy_user_session_path,
+    current_user: {
+        name: current_user&.name
+    }
+}) %>
